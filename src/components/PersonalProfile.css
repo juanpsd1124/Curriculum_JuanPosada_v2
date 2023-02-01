@@ -1,0 +1,100 @@
+
+.personalProfile{
+    display: flex;
+    width: 80%;
+    gap:50px;
+    margin:0 auto 96px auto;
+    position: relative;
+    z-index: 3;
+}
+
+.personalProfile img{
+    position: relative; 
+    width: 280px;
+    height: 400px;
+    top:15px;
+}
+
+.personalProfileInfo{
+    margin-bottom:0;
+    color: #FFFBF5;
+}
+
+.personalProfileInfo .name{
+    /* display: inline-block; */
+    width: max-content;
+    position:relative;
+    font-size: 3.5rem;
+    margin: 0 0 0 0;
+   
+}
+
+.personalProfileInfo .name:before{
+    content:"";
+    position:absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    
+    
+}
+
+.personalProfileInfo .name:before{
+
+    animation: typewriter 1s steps(11) forwards;
+}
+
+@keyframes typewriter {
+    to{
+        width:100%;
+    }
+}
+
+
+.personalProfileInfo .position{
+    font-size: 1.8rem;
+    margin: 0 0 3rem 0;
+}
+
+.personalProfileInfo .contactInfo dt,dd{
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.personalProfileInfo .contactInfo dd{
+    padding-left: 4rem;
+}
+
+dt{
+    float:left;
+    clear:left;
+}
+
+dt::after{
+    content:":"
+}
+
+.social{ 
+    margin-right: 20px;
+}
+
+.social:visited{
+    color:white;
+}
+
+.social svg{
+    width: 35px;
+    height: 35px;
+    color: #fff;
+}
+
+@media screen and (max-width: 992px){
+    
+   
+    .personalProfile img{
+        display: none;
+    }
+
+    
+}

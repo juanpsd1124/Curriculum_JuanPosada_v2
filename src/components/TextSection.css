@@ -1,0 +1,32 @@
+
+.title{
+    margin: 0 0 0 0;
+    font-weight: 500;
+    font-size: 3.5rem;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+@media screen and (max-width: 992px){
+    .text-container{
+        padding: 0 0 0 20px;
+    }
+    
+    .title{
+        text-align:left;
+       
+        
+    }
+
+    .paragraph{
+        width: 95%;
+    }
+}
+
+
+
