@@ -1,11 +1,13 @@
 
+.title{
+    margin-bottom: 19.2px;
+}
+
 .skill-group{
     width: 80%;
     margin: 0 auto 30px auto;
     padding: 20px 20px 40px 20px;
-    background-color: #ffffff;
-    
-    
+    background-color: #ffffff;  
 }
 
 .skill-category{
@@ -20,7 +22,6 @@
     font-weight: 600;
     text-align: center;
 }
-
 
 svg{
     width: 80px;
@@ -51,7 +52,7 @@ svg{
     left: 0;
     height: 8px;
     width:0%;
-    background-color: blueviolet;
+    background: linear-gradient(40deg,hsla(0,34%,71%,.95),rgba(74,76,179,.95) 90%);;
   
 }
 

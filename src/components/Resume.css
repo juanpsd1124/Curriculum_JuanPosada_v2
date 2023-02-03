@@ -92,8 +92,9 @@
 
 .timelineContent .date{
     position: absolute;
-    right: -58%;
-    top: -1%;
+    /* right: -58%; */
+    right: -56%;
+    top: -2%;
     font-size: 1.5rem;
     display: inline-block;
     vertical-align: top;

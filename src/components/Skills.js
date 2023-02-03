@@ -1,14 +1,10 @@
 import './Skills.css'
-import styled, { keyframes } from "styled-components"
-// import reactImg from '../images/react.svg'
 
-const per = '80%'
+function Skills({icon,title,skills}){
 
-function Skills({icon,skills}){
+    const renderedInfo = skills.skillInfo.map( (skill) => {
 
-    const renderedInfo = skills.map( (skill) => {
-
-        return <div className='skill'>
+        return <div key={skill.name} className='skill'>
 
             <div className='skill-info'>
                 <p className='skill-name'>{skill.name}</p>
@@ -26,10 +22,9 @@ function Skills({icon,skills}){
 
     return <div className='skill-group'>
 
-
         <div className='skill-category'>
             {icon}
-            <p className='category-title'>Desarrollo web y programacion general</p>
+            <p className='category-title'>{title}</p>
         </div>
 
         {renderedInfo}

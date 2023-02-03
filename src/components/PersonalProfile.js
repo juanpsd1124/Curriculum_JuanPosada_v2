@@ -1,25 +1,29 @@
 import './PersonalProfile.css'
 import imageSRC from '../images/JuanPosada.jpg'
 import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { useContext } from 'react';
+import LanguageContext from '../context/LanguageContext';
 
 function PersonalProfile(){
+
+    const {text} = useContext(LanguageContext);
 
     return <div className="personalProfile">
     <img src={imageSRC} alt="Juan Posada" ></img>
     <div className='personalProfileInfo'>
         <div className='name-content'>
-            <p className='personalProfileInfo name'>Juan Posada</p>
+            <p className='personalProfileInfo name'>{text.personalProfileInfo.name}</p>
         </div>
 
-        <p className='personalProfileInfo position'>Desarrollador Frontend Junior, Ingeniero de hardware</p>
+        <p className='personalProfileInfo position'>{text.personalProfileInfo.position}</p>
         <div className='personalProfileInfo contactInfo'>
             <dl>
-                <dt className='contactInfo'>Edad</dt>
-                <dd>26</dd>
-                <dt>Telefono</dt>
-                <dd>+57-301-625-8322</dd>
-                <dt>e-Mail</dt>
-                <dd>juanpsd1224@hotmail.com</dd>
+                <dt className='contactInfo'>{text.personalProfileInfo.contactInfo.age.title}</dt>
+                <dd>{text.personalProfileInfo.contactInfo.age.value}</dd>
+                <dt>{text.personalProfileInfo.contactInfo.phone.title}</dt>
+                <dd>{text.personalProfileInfo.contactInfo.phone.value}</dd>
+                <dt>{text.personalProfileInfo.contactInfo.mail.title}</dt>
+                <dd>{text.personalProfileInfo.contactInfo.mail.value}</dd>
             </dl>
 
             <div className='social-network-bar'>
