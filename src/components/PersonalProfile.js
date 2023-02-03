@@ -35,14 +35,7 @@ function PersonalProfile(){
 </div> 
 
         
-
     
-    
-    
-    
-    
-    
-        
 }
 
 export default PersonalProfile;

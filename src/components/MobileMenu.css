@@ -1,5 +1,10 @@
+.mobileMenu{
+    
+}
+
 .mobileMenuContent{
     position:absolute;
+    z-index: 5;
     top:0;
     left:0;
     width: 100%;
@@ -7,16 +12,22 @@
     background-color: rgba(0,0,0,.8);
 }
 
+.fixed{
+    position:fixed;
+}
+
 .mobile{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white; 
+    color: white;
+    
 }
 
 .options{
     position: absolute;
+    z-index: 6;
     top:40%
 } 
 
