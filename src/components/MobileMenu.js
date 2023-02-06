@@ -3,16 +3,49 @@ import ReactDOM from "react-dom";
 import LanguageContext from "../context/LanguageContext";
 import './MobileMenu.css';
 
-function MobileMenu( { onClose, menuOptions} ){
-    const {handleLanguage} = useContext(LanguageContext);
+function MobileMenu( { onClose, navRefs, menuOptions} ){
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            document.body.style.overflow = 'unset';
+        }
+    }, [])
+
+    const {text, handleLanguage} = useContext(LanguageContext);
+
+    const renderedElements = text.navBarOptions.map((option, index) => {
+
+        function scrolltoTargetAdjustedMobile() {
+            console.log("scroll mobile")
+            let headerOffset = window.scrollY === 0 ? 100 : 60;
+            let elementPosition = navRefs.current[index].getBoundingClientRect().top;
+            let offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: index === 0 ? 0 : offsetPosition,
+                behavior: 'smooth'
+            });
+        };
+
+        const handleClick = () => {
+            scrolltoTargetAdjustedMobile();
+        };
+        
+        return <li key={option}>
+            <a onClick={handleClick} href="#!" >{option}</a>
+        </li>
+    });
 
     return ReactDOM.createPortal(
         <div className="mobile">
             <div onClick={onClose} className="mobileMenuContent fixed"></div>
 
-            <div className="options">
-                <ul onClick={onClose} href=" ">
-                    {menuOptions}
+            <div className="options fixed">
+                <ul onClick={onClose} href=" " className="fixed">
+                    {/* {menuOptions} */}
+                    {renderedElements}
 
                     <ul className='language-switcher'>
                     <li id='en' onClick={() => handleLanguage('en')} className='language-option'>
@@ -28,14 +61,11 @@ function MobileMenu( { onClose, menuOptions} ){
                         <p>Version en español</p>
                     </li>
                 </ul>
-
-
                 </ul>
             </div>
         </div>
         ,document.querySelector('.mobileMenu')
     );
-    
 }
 
 export default MobileMenu;

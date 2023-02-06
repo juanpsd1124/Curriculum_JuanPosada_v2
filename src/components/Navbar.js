@@ -20,7 +20,6 @@ const Navbar = forwardRef( ({navRefs},ref) => {
 
     const handleClickMobile = () => {
         setShowMobile(true);
-        window.scrollTo(0, 0)
     };
 
     const handleCloseMobile = () => {
@@ -29,25 +28,25 @@ const Navbar = forwardRef( ({navRefs},ref) => {
 
     const renderedElements = text.navBarOptions.map((option, index) => {
 
-         function scrolltoTargetAdjusted(homeScroll) {
-            var headerOffset = window.scrollY === 0 ? 180 : 84
-            var elementPosition = navRefs.current[index].getBoundingClientRect().top;
-          var offsetPosition = elementPosition + window.scrollY - headerOffset;
-        
+        function scrolltoTargetAdjusted() {
+            let headerOffset = window.scrollY === 0 ? 180 : 84;
+            let elementPosition = navRefs.current[index].getBoundingClientRect().top;
+            let offsetPosition = elementPosition + window.scrollY - headerOffset;
+
             window.scrollTo({
                 top: index === 0 ? 0 : offsetPosition,
                 behavior: 'smooth'
-            })
-        }
+            });
+        };
 
         const handleClick = () => {
             scrolltoTargetAdjusted();
-        } 
+        };
         
-        return <li key={option} >
+        return <li key={option}>
             <a onClick={handleClick} href="#!" >{option}</a>
         </li>
-    })
+    });
 
     return <div ref={ref} className="menu">
 
@@ -76,21 +75,8 @@ const Navbar = forwardRef( ({navRefs},ref) => {
             <span><IoMenuOutline /> </span>
         </button>
     </div>
-
-    {showMobile && <MobileMenu onClose={handleCloseMobile} menuOptions={renderedElements} />}
-
-
-    {/* //     <div className={`${sticky ? "mobileButton sticky" : "mobileButton"}`}>
-    //         <button onClick={handleClickMobile()}>
-    //             <span><IoMenuOutline /> </span>
-    //         </button>
-    //     </div>
-    //     {showMobile && <MobileMenu onClose={handleCloseMobile} menuOptions={renderedElements} />} */}
-
+    {showMobile && <MobileMenu onClose={handleCloseMobile} navRefs={navRefs} menuOptions={renderedElements} />}
     </div>
-
 });
-
-
 
 export default Navbar;

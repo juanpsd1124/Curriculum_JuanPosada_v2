@@ -207,6 +207,11 @@
     .timeline .timelineBlock:nth-child(even) .timelineContent .date{
         left:-21px;
         top:-65px;
+        right: 0%;
+    }
+
+    .timeline .timelineBlock:nth-child(even) .timelineContent .date{
+        text-align: left;
     }
 
     .timelineContent:before{

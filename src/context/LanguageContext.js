@@ -17,42 +17,42 @@ const translations = {
             position: 'Desarrollador Frontend Junior, Ingeniero de hardware',
             contactInfo: {
                 age: { title: "Edad", value: "26" },
-                phone: { title: "Telefono", value: "+57-301-625-8322" },
+                phone: { title: "Teléfono", value: "+57-301-625-8322" },
                 mail: { title: "e-Mail", value: "juanpsd1224@hotmail.com" }
             }
         },
         aboutMeInfo: {
             sectionTitle: 'Presentación',
-            paragraph: 'Ingeniero electronico con mas de dos años de experiencia en industria electronica, desarrollo e integracion de hardware con enfasis en IoT. Poseo conocimientos de programacion general, desarrollo web con principales lenguajes de programacion utilizados en la actualidad. Poseo habilidades para diseñar y escribir codigo de calidad utilizando buenas practicas de desarrollo. Soy una persona proactiva, colaborativa y con alta capacidad de auto aprendizaje. '
+            paragraph: 'Ingeniero electrónico con más de dos años de experiencia en industria electrónica, desarrollo e integración de hardware con énfasis en IoT. Poseo conocimientos de programación general, desarrollo web con principales lenguajes de programación utilizados en la actualidad. Poseo habilidades para diseñar y escribir código de calidad utilizando buenas prácticas de desarrollo. Soy una persona proactiva, colaborativa y con alta capacidad de autoaprendizaje. '
         },
         experienceInfo: {
             icon: <FcBriefcase />,
             sectionTitle: "Experiencia",
-            paragraph: "Experiencia en desarrollo de hardware e integracion de software en empresas de sector energetico y transporte.",
+            paragraph: "Experiencia en desarrollo de hardware e integración de software en empresas de sector energético y transporte.",
             companiesInfo: [
                 {
                     'companyName': 'INPEL SA',
-                    'position': 'Hardware Engineer',
+                    'position': 'Ingeniero Hardware',
                     'dateRange': "2022",
-                    'description': "Diseño y desarrollo de hardware para medicion de energia inteligente usando SOC e integracion Linux en sistemas embebidos con microprocesadores NXP con entorno de desarrollo Yocto."
+                    'description': "Diseño y desarrollo de hardware para medición de energía inteligente usando SOC e integración Linux en sistemas embebidos con microprocesadores NXP con entorno de desarrollo Yocto."
                 },
                 {
                     'companyName': 'Geotech Solutions',
                     'position': 'Analista I+D+I',
                     'dateRange': "2020-2022",
-                    'description': "Desarrollo e integracion de hardware monitoreo vehicular GPS a plataforma de monitoreo vehicular."
+                    'description': "Desarrollo e integración de hardware monitoreo vehicular GPS a plataforma de monitoreo vehicular."
                 },
                 {
                     'companyName': 'Alutrafic LED',
                     'position': 'Auxiliar de Garantias',
                     'dateRange': "2019",
-                    'description': "Revisión, ensamble y reparacion de luminarias LED. Redaccion informes referentes a garantias"
+                    'description': "Revisión, ensamble y reparación de luminarias LED. Redaccion informes referentes a garantías"
                 }]
         },
         educationInfo: {
             icon: <FcDiploma2 />,
             sectionTitle: "Educación",
-            paragraph: "Formacion profesional y tecnologica de calidad continuamente actualizada con cursos complementarios y auto aprendizaje.",
+            paragraph: "Formacion profesional y tecnológica de calidad continuamente actualizada con cursos complementarios y auto-aprendizaje.",
             companiesInfo: [
                 {
                     'companyName': 'Universidad Nacional de Colombia - Ministerio TIC',
@@ -64,7 +64,7 @@ const translations = {
                     'companyName': 'Universidad Autónoma del Caribe',
                     'position': 'Ingeniería Electrónica y Telecomunicaciones',
                     'dateRange': "2014-2022",
-                    'description': "Matrícula Profesional AT295-148732 "
+                    'description': "Matrícula Profesional AT295-148732"
                 },
                 {
                     'companyName': 'Servicio Nacional de Aprendizaje - SENA',
@@ -74,9 +74,9 @@ const translations = {
                 }]
         },
         skills: {
-            sectionTitle: 'Skills',
+            sectionTitle: 'Habilidades',
             codingSkills: {
-                skillDescription: 'Desarrollo web y programacion general',
+                skillDescription: 'Desarrollo web y programación general',
                 skillInfo: [
                     {
                         name: 'React JS',
@@ -120,7 +120,7 @@ const translations = {
                         percentage: '60%'
                     },
                     {
-                        name: 'Integracion MCAD/ECAD',
+                        name: 'Integración MCAD/ECAD',
                         percentage: '40%'
                     },
                     {

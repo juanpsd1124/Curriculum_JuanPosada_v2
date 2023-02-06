@@ -7,18 +7,8 @@
 
 html, body {
   width: 100%;
-  margin: 0; 
-  padding: 0; 
-  overflow-x: hidden;
-  
-}
-
-body{
-
-}
-
-.overHidden{
-    overflow: hidden;
+  margin: 0 auto; 
+  padding: 0;
 }
 
 .header::before{
@@ -28,7 +18,6 @@ body{
     right: 0;
     position: absolute;
     content: "";
-    /* background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95)); */
     background: linear-gradient(90deg, rgba(74,76,179,0.95) 0%, rgba(9,9,121,0.804359243697479) 66%, rgba(206,156,156,0.3435749299719888) 100%);
     z-index: 1;
 }
@@ -40,8 +29,7 @@ body{
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
-    position: relative;
-    
+    position: relative;   
 }
 
 body{

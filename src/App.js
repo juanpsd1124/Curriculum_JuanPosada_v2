@@ -10,10 +10,11 @@ import Education from './components/Education';
 import SkillGroup from './components/SkillsGroup';
 
 function App(){
-
     // useEffect(() => {
     //     AOS.init({duration:3000});
     // }, [])
+
+    // document.body.style.overflow = 'hidden';
 
     const navRefs = useRef([]);
 
@@ -24,7 +25,6 @@ function App(){
     }
 
     return <LanguageProvider >
-    
     <div className='App'>
         <div ref={addToRefs} className='header'>
             <Navbar navRefs={navRefs} />
