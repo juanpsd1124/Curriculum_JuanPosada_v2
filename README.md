@@ -1,7 +1,3 @@
 # Juan Posada Curriculum v2 coded with React JS 
 
-###### Pending tasks
-
-
-
-- [] Implement home navbar scroll
+This is my curriculum developed using React JS framework
